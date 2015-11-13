@@ -1,0 +1,296 @@
+﻿@model bankWebApp.Models.clientTable
+
+@{
+    ViewBag.Title = "edit";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+@using (@Html.BeginForm())
+{
+    <div class="addTableDiv">
+        <h3>Client edit panel</h3>
+        <table id="addTabel">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.clientsId,new{Readonly="true"})
+                    </td>
+                </tr>
+                <tr>
+                    <td>Name*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.firstName)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.firstName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Second Name*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.secondName)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.secondName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.lastName)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.lastName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Birthday*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.birthday)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.birthday)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sex*</td>
+                    <td>M @Html.RadioButtonFor(client => client.sex, "Male", new { Checked = "checked" })
+                        F @Html.RadioButtonFor(client => client.sex, "Female")
+                    </td>
+                </tr>
+                <tr>
+                    <td>Passport Seria*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.passportSeria)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.passportSeria)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Passport №*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.passportNumber, new { @type = "number" })
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.passportNumber)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Issued by*</td>
+                    <td>
+                        @Html.TextBoxFor(clients => clients.issuedBy)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.issuedBy)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Issue*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.dateOfIssue)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.dateOfIssue)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Passport Id*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.passportId)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.passportId)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Place of born*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.birthPlace)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.birthPlace)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Town of living*</td>
+                    <td>
+                        @Html.DropDownListFor(client => client.townLiving,
+                         new[] {  new SelectListItem(){Text=Model.townLiving, Value=Model.townLiving}, 
+                                 new SelectListItem() { Text = "Brest", Value = "Brest" },
+                                 new SelectListItem() { Text = "Minsk", Value = "Minsk" },
+                                 new SelectListItem() { Text = "New-York", Value = "New-York" },
+                                 new SelectListItem() { Text = "Berlin", Value = "Berlin" },
+                                 new SelectListItem() { Text = "Chicago", Value = "Chicago" },
+                                 new SelectListItem() { Text = "Paris", Value = "Paris" }
+                         }, "select town")
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.townLiving)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address of living*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.addressLiving)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.addressLiving)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Home phone</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.homePhone)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.homePhone)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile phone</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.mobilePhone)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.mobilePhone)
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.email, new { @type = "email" })
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.email)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Work place</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.workPlace)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.workPlace)
+                    </td>
+                </tr>
+                <tr>
+                    <td>work Position</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.workPosition)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.workPosition)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Registration town*</td>
+                    <td>
+                        @Html.DropDownListFor(client => client.registrationTown,
+                         new[] {  new SelectListItem(){Text=Model.registrationTown, Value=Model.registrationTown},
+                                 new SelectListItem() { Text = "Brest", Value = "Brest" },
+                                 new SelectListItem() { Text = "Minsk", Value = "Minsk" },
+                                 new SelectListItem() { Text = "New-York", Value = "New-York" },
+                                 new SelectListItem() { Text = "Berlin", Value = "Berlin" },
+                                 new SelectListItem() { Text = "Chicago", Value = "Chicago" },
+                                 new SelectListItem() { Text = "Paris", Value = "Paris" }
+                         }, "select Town")
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.registrationTown)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Registration address*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.registrationAddress)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.registrationAddress)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Marital status*</td>
+                    <td>
+                        @Html.DropDownListFor(client => client.maritialStatus,
+                         new[] {  new SelectListItem(){Text=Model.maritialStatus, Value=Model.maritialStatus},
+                                 new SelectListItem() { Text = "Married", Value = "Married" },
+                                 new SelectListItem() { Text = "Free", Value = "Free" },
+                                 new SelectListItem() { Text = "Divorced", Value = "Divorced" },
+                                 new SelectListItem() { Text = "Windowed", Value = "Windowed" },
+                         }, "select maritial status")
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.maritialStatus)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Citizenship*</td>
+                    <td>
+                        @Html.DropDownListFor(client => client.citizenship,
+                         new[] { new SelectListItem(){Text=Model.citizenship, Value=Model.citizenship},
+                                 new SelectListItem() { Text = "Belarus", Value = "Belarus" },
+                                 new SelectListItem() { Text = "Russian", Value = "Russian" },
+                                 new SelectListItem() { Text = "Briton", Value = "Briton" },
+                                 new SelectListItem() { Text = "German", Value = "German" },
+                                 new SelectListItem() { Text = "Frenchman", Value = "Frenchman" }
+                         }, "select citizenship")
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.citizenship)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invalid*</td>
+                    <td>
+                        @Html.DropDownListFor(client => client.invalid,
+                         new[] { new SelectListItem(){Text=Model.invalid, Value=Model.invalid},
+                                 new SelectListItem() { Text = "no", Value = "no" },
+                                 new SelectListItem() { Text = "first", Value = "first" },
+                                 new SelectListItem() { Text = "second", Value = "second" },
+                                 new SelectListItem() { Text = "third", Value = "third" },
+                         }, "select invalid type")
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.invalid)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pensioner*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.pensioner)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.pensioner)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Month income</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.monthIncome, new { @type = "number" })
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.monthIncome)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reservist*</td>
+                    <td>
+                        @Html.TextBoxFor(client => client.reservist)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(clients => clients.reservist)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="addClientButton" type="image" src="~/Content/images/file_add.png">
+                    </td>
+                    <td>
+                        @Html.ActionLink(" ", "/", null, new { @class = "cancelButton" })
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}

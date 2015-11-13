@@ -1,0 +1,204 @@
+﻿@using bankWebApp.Models
+@{
+    ViewBag.Title = "Clients info";
+}
+
+@model List<clientTable>
+<div class="main">
+    <div> @Html.ActionLink("add", "addPanel", null, new { @class = "addButtonOnMain" }) <h3>Clients Base</h3></div>
+    
+   
+    <div class="modelDiv">
+        <table class="ModelTable">
+    @foreach (clientTable client in Model)
+    {
+            
+                <tr>
+                    <td>
+                        <strong>@client.secondName @client.firstName @client.lastName</strong>
+                    </td>
+                    <td>
+                        @Html.ActionLink("delete", "delete", new { id = @client.clientsId }, new { @class = "deleteButtonOnMain" })
+                    </td>
+                    <td>
+                         @Html.ActionLink("edit", "edit", new { id = @client.clientsId }, new { @class = "editButtonOnMain" })
+                    </td>
+                    <td>
+                        <input type="image" src="~/Content/images/right.png" value="+"  name="@client.clientsId" />
+                    </td>
+                </tr>
+            
+    }
+            </table>
+    </div>
+    <div class="wrapper">
+    @foreach (clientTable client in Model)
+    {
+        
+            <div class="descriptor" id="@client.clientsId">
+                <table class="mainTable">
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>
+                                @client.firstName
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Second Name</td>
+                            <td>
+                                @client.secondName
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Last Name</td>
+                            <td>
+                                @client.lastName
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Birthday</td>
+                            <td>
+                                @client.birthday
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sex</td>
+                            <td>
+                                @client.sex
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Passport Seria</td>
+                            <td>
+                                @client.passportSeria
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Passport №</td>
+                            <td>
+                                @client.passportNumber
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Issued by</td>
+                            <td>
+                                @client.issuedBy
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date of Issue</td>
+                            <td>
+                                @client.dateOfIssue
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Passport Id</td>
+                            <td>
+                                @client.passportId
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Place of born</td>
+                            <td>
+                                @client.birthPlace
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Town of living</td>
+                            <td>
+                                @client.townLiving
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Address of living</td>
+                            <td>
+                                @client.addressLiving
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Home phone</td>
+                            <td>
+                                @client.homePhone
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mobile phone</td>
+                            <td>
+                                @client.mobilePhone
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>
+                                @client.email
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Work place</td>
+                            <td>
+                                @client.workPlace
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>work Position</td>
+                            <td>
+                                @client.workPosition
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Registration town</td>
+                            <td>
+                                @client.registrationTown
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Registration address</td>
+                            <td>
+                                @client.registrationAddress
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Marital status</td>
+                            <td>
+                                @client.maritialStatus
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Citizenship</td>
+                            <td>
+                                @client.citizenship
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Invalid</td>
+                            <td>
+                                @client.invalid
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pensioner</td>
+                            <td>
+                                @client.pensioner
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Month income</td>
+                            <td>
+                                @client.monthIncome
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Reservist</td>
+                            <td>
+                                @client.reservist
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        
+    }
+    </div>
+</div>

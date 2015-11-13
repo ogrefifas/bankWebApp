@@ -1,0 +1,256 @@
+﻿a.addButtonOnMain {
+    background: url(../Content/Images/file_add.png) no-repeat left;
+    display: block;
+    width: 38px;
+    height: 38px;
+    float:right;
+    text-indent: -9999px;
+}
+.descriptor {
+    display:none;
+}
+
+select {
+    width: 235px;
+    height:30px;
+    border:1px;
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    color: #bbb;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 16px;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+input[type="text"], input[type="date"], input[type="number"], input[type="email"] {
+    
+    height: 30px;
+    width: 200px;
+    border:1px;
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    color: #bbb;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 16px;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+
+textarea {
+    height: 50px;
+    border:1px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    color: #bbb;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 16px;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+option {
+    color:black;
+}
+    input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus, select:focus, input[type="email"]:focus, textarea:focus {
+        color: #fff;
+        background-color:rgba(193, 193, 193, 0.16);
+        outline: none;
+    }
+
+a.cancelButton {
+    background: url(../Content/Images/cancel.png) no-repeat top left;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    text-indent: -9999px;
+}
+
+a.deleteButtonOnMain {
+    background: url(../Content/Images/file_delete.png) no-repeat left;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    text-indent: -9999px;
+}
+
+a.editButtonOnMain {
+    background: url(../Content/images/file_edit.png) no-repeat left;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    text-indent: -9999px;
+}
+
+textarea {
+    resize: none;
+}
+
+p {
+    margin: 0;
+}
+
+.mainTable > tbody > tr > td:nth-child(1) {
+    text-align: left;
+    color:rgba(72, 43, 156, 0.58);
+    border-style: solid none solid solid;
+    border-color: rgba(72, 43, 156, 0.58);
+}
+
+.mainTable > tbody > tr > td:nth-child(2) {
+    text-align: left;
+    color:dimgrey;
+    border-style: solid solid solid none;
+    border-color: rgba(72, 43, 156, 0.58);
+}
+
+.modelDiv {
+    vertical-align:top;
+    margin:0 auto;
+    width:500px;
+    float:none;
+}
+#addTabel > tbody > tr > td:nth-child(3) {
+    text-align: left;
+    border: none;
+    max-width: 150px;
+}
+
+#addTabel > tbody > tr > td:nth-child(1) {
+    text-align: left;
+    border-style: none none solid none;
+    border-color: #250000;
+}
+
+#addTabel > tbody > tr > td:nth-child(2) {
+    border-style: none none solid none;
+    border-color: #250000;
+    text-align: center;
+}
+
+#addTabel > tbody > tr:last-child > td:nth-child(1) {
+    border: none;
+}
+
+#addTabel > tbody > tr:last-child > td:nth-child(2) {
+    text-align: right;
+    border: none;
+}
+
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgba(251, 247, 247, 0.63); /* Выравнивание заголовка по центру */
+    font: bold 25px Tahoma;
+}
+
+* {
+    -webkit-userselect: none;
+    margin: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    height:100% !important;
+}
+html {
+    height:100%;
+}
+html { height: 100% } 
+
+#addTabel {
+    margin: 0 auto;
+    background-color: inherit;
+    border-color: white;
+}
+
+.ModelTable {
+    max-width:500px;
+    border:none;
+    margin:0 auto;
+}
+.ModelTable > tbody > tr {
+    border-style:none none solid none;
+    border-color:rgba(72, 43, 156, 0.58);
+
+
+}
+
+.wrapper {
+    display:none;
+}
+.ModelTable > tbody > tr>td {
+    border:none;
+        padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+}
+.mainTable {
+    margin: 0 auto;
+    background-color: inherit;
+    border-color: white;
+    max-width:300px;
+    border:solid 2px;
+    
+}
+.mainTable>tbody>tr>td {
+    padding:4px;
+}
+.addTableDiv,.main {
+    margin: 0 auto;
+    min-height: 100%;
+    max-width: 750px;
+    min-width:300px;
+    background-color: rgb(10, 10, 10);
+}
+
+table {
+    border-collapse: collapse;
+    color: #7C8CCC;
+    text-align: center;
+}
+
+
+details {
+    color: white;
+}
+
+td {
+    color: rgba(251, 247, 247, 0.63);
+    border: 1px solid black;
+    text-align: center;
+}
+
+th {
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(145, 147, 212, 0.63);
+}
+
+input[readonly="True"] {
+    color:#292929;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #250000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
